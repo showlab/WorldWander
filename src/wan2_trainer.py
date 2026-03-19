@@ -320,19 +320,40 @@ def main(opt):
     # set seed
     L.seed_everything(opt.seed)
     # dataset && dataloader
+    # train_dataset = CustomTrainDataset(
+    #     first_video_root=opt.dataset.first_video_root,
+    #     third_video_root=opt.dataset.third_video_root,
+    #     ref_image_root=opt.dataset.ref_image_root,
+    #     #
+    #     height=opt.dataset.height,
+    #     width=opt.dataset.width,
+    #     resize_long=opt.dataset.resize_long,
+    #     sample_n_frames=opt.dataset.sample_n_frames,
+    #     stride=opt.dataset.stride,
+    #     is_one2three=opt.dataset.is_one2three,
+    #     training_len=opt.num_nodes * opt.num_gpus * opt.training.accumulate_grad_batches * opt.training.max_steps * opt.training.batch_size # 自动计算样本数
+    # )
     train_dataset = CustomTrainDataset(
-        first_video_root=opt.dataset.first_video_root,
-        third_video_root=opt.dataset.third_video_root,
-        ref_image_root=opt.dataset.ref_image_root,
-        #
+        # 新增参数: 支持 JSON 索引
+        json_index_path=opt.dataset.get('json_index_path', None),
+        video_root_prefix=opt.dataset.get('video_root_prefix', ''),
+        followbench_root=opt.dataset.get('followbench_root', None),
+        warped_video_root=opt.dataset.get('warped_video_root', None),
+        
+        # 兼容原有参数 (如果 yaml 里写了 root 也不影响，Dataset 内部会优先 JSON)
+        first_video_root=opt.dataset.get('first_video_root', None),
+        third_video_root=opt.dataset.get('third_video_root', None),
+        ref_image_root=opt.dataset.get('ref_image_root', None),
+        
+        # 其他参数
         height=opt.dataset.height,
         width=opt.dataset.width,
         resize_long=opt.dataset.resize_long,
         sample_n_frames=opt.dataset.sample_n_frames,
         stride=opt.dataset.stride,
-        is_one2three=opt.dataset.is_one2three,
-        training_len=opt.num_nodes * opt.num_gpus * opt.training.accumulate_grad_batches * opt.training.max_steps * opt.training.batch_size # 自动计算样本数
+        is_one2three=opt.dataset.is_one2three
     )
+    
     train_dataloader = DataLoader(
         train_dataset,
         batch_size=opt.training.batch_size,
@@ -343,6 +364,12 @@ def main(opt):
     )
     #
     val_dataset = CustomTrainDataset(
+        # 新增参数: 支持 JSON 索引
+        json_index_path=opt.dataset.get('json_index_path', None),
+        video_root_prefix=opt.dataset.get('video_root_prefix', ''),
+        followbench_root=opt.dataset.get('followbench_root', None),
+        warped_video_root=opt.dataset.get('warped_video_root', None),
+        
         first_video_root=opt.dataset.first_video_root,
         third_video_root=opt.dataset.third_video_root,
         ref_image_root=opt.dataset.ref_image_root,
@@ -402,10 +429,18 @@ def main(opt):
         num_nodes=opt.num_nodes,
     )
     #
+    # trainer.fit(system,
+    #     train_dataloaders=train_dataloader,
+    #     val_dataloaders=val_dataloader,
+    #     # ckpt_path='resume_path'
+    # )
+    ckpt_path = opt.resume_path if opt.resume_path and os.path.exists(opt.resume_path) else None
+    if ckpt_path:
+        print(f"Resuming from checkpoint: {ckpt_path}")
     trainer.fit(system,
         train_dataloaders=train_dataloader,
         val_dataloaders=val_dataloader,
-        # ckpt_path='resume_path'
+        ckpt_path=ckpt_path  # 传入处理后的路径
     )
 
 

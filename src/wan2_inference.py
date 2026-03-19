@@ -122,8 +122,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="configs/wan2-2_lora_three2one.yaml", help="path to the yaml config file")
     parser.add_argument("--ckpt_path", type=str)
-    parser.add_argument("--original_video_root", type=str, help="original video root")
-    parser.add_argument("--ref_image_root", type=str, help="reference image root")
+    parser.add_argument("--json_path", type=str, help="json index file for test")
+    parser.add_argument("--video_root", type=str, help="dataset root")
+    # parser.add_argument("--original_video_root", type=str, help="original video root")
+    # parser.add_argument("--ref_image_root", type=str, help="reference image root")
     parser.add_argument("--pred_path", type=str, default="", help="save path for inference")
     parser.add_argument("--seed", type=int, default=42)
     # ----------------------------------------------------------------------
