@@ -47,7 +47,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
 </pre>
 
 ## 🎬 Teaser
-<b>TL;DR:</b> We propose WorldWander, an in-context learning framework for translating between egocentric and exocentric worlds in video generation. We also release [EgoExo-8K](https://huggingface.co/datasets/QuanjianSong/EgoExo-Synthetic), a large-scale dataset containing synchronized egocentric–exocentric triplets. The teaser is shown below:
+<b>TL;DR:</b> We propose WorldWander, an in-context learning framework for translating between egocentric and exocentric worlds in video generation. We also release [EgoExo-8K](https://huggingface.co/datasets/QuanjianSong/EgoExo-Synthetic), a high-quality dataset containing synchronized egocentric–exocentric triplets. The teaser is shown below:
 ![Overall Framework](assets/teaser.png)
 
 
