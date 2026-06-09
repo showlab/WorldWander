@@ -73,6 +73,7 @@ git clone https://github.com/showlab/WorldWander.git
 # Installation with the requirement.txt
 conda create -n WorldWander python=3.10
 conda activate WorldWander
+cd WorldWander
 pip install -r requirements.txt
 # Installation with environment.yml
 conda env create -f environment.yml

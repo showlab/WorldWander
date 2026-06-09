@@ -1,0 +1,59 @@
+experiment_project: 'WorldWander'
+experiment_name: 'rank-80_stride-2_v1'
+model_id: '/opt/liblibai-models/user-workspace2/model_zoo/Wan2.2-TI2V-5B-Diffusers'
+output_root: 'outputs/wan2-2_one2three_realworld'
+use_drop_text: True
+use_lora: True
+use_collaborative_position_encoding: True
+
+
+training:
+  resume_path: outputs/wan2-2_one2three_realworld/rank-80_stride-2_v1/checkpoints/step=2400.ckpt
+  batch_size: 2
+  max_steps: 8001
+  warmup_steps: 10
+  rank: 80
+  learning_rate: 5e-5
+  weight_decay: 1e-2
+  save_val_interval_steps: 400
+  accumulate_grad_batches: 1
+  gradient_clip_val: ~
+  precision: "bf16-mixed"
+  accelerator: "auto"
+  strategy: 'auto'
+  gradient_checkpointing: True
+  benchmark: False
+
+
+dataset:
+  # [核心] 使用 JSON 索引路径
+  json_index_path: "/opt/liblibai-models/user-workspace2/dataset/ego/FollowBench/train/index.json"
+  followbench_root: "/opt/liblibai-models/user-workspace2/dataset/ego/FollowBench/train/"
+  warped_video_root: "/path/to/WarpedVideo" # 预处理输出的路径
+  first_video_root: ""
+  third_video_root: ""
+  ref_image_root: ""
+  
+  # 任务设置
+  is_one2three: True
+  height: 704
+  width: 1280
+  resize_long: 1280
+  sample_n_frames: 49
+  stride: 2
+
+  # first_video_root: 'EgoExoReal/First_Video'
+  # third_video_root: 'EgoExoReal/Third_Video'
+  # ref_image_root: 'EgoExoReal/Reference_Image'
+  # is_one2three: True
+  # height: 704
+  # width: 1280
+  # resize_long: 1280
+  # sample_n_frames: 49
+  # stride: 2
+
+  fps: 8
+  num_workers: 8
+  shuffle: True
+  drop_last: True 
+  pin_memory: True
