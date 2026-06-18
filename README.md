@@ -3,27 +3,6 @@
 WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
 </h1>
 
-
-<div>
-    <a href='' target='_blank' style='text-decoration:none'>Quanjian Song<sup>1,2*</sup></a>, &ensp;
-    <a href='' target='_blank' style='text-decoration:none'>Yiren Song<sup>1,2*</sup></a>, &ensp;
-    <a href='' target='_blank' style='text-decoration:none'>Kelly Peng<sup>2</sup></a>, &ensp;
-    <a href='' target='_blank' style='text-decoration:none'>Yuan Gao<sup>2</sup></a>, &ensp;
-    <a href='' target='_blank' style='text-decoration:none'>Mike Zheng Shou<sup>1,†</sup></a>
-</div>
-
-<div>
-    <sup>1</sup>Show Lab, National University of Singapore &ensp;
-    <sup>2</sup>First Intelligence
-    <br>
-    <sub>
-        <sup>*</sup>Equal contribution.   &ensp;
-        <sup>†</sup>Corresponding author.
-    </sub>
-</div>
-
-<sub></sub>
-
 <p align="center">
     <span>
         <a href="https://arxiv.org/pdf/2511.22098" target="_blank"> 
@@ -43,6 +22,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
 
 ## 🎉 News
 <pre>
+• <strong>2026.05</strong>: 🔥 The EgoExo-Synthetic dataset is now released.
 • <strong>2025.12</strong>: 🔥 Our paper, training code, and project page are released.
 </pre>
 
