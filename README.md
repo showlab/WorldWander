@@ -13,7 +13,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
         <img src='https://img.shields.io/badge/Project_Page-WorldWander-green' alt='Project Page'></a>  &emsp;  &emsp;
     </span>
     <span> 
-        <a href='' target="_blank"> 
+        <a href='https://huggingface.co/datasets/QuanjianSong/EgoExo-Synthetic' target="_blank"> 
         <img src='https://img.shields.io/badge/Datasets-WorldWander-yellow' alt='Hugging Face'></a> &emsp;  &emsp;
     </span>
 </p>
