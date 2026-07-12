@@ -22,6 +22,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
 
 ## 🎉 News
 <pre>
+• <strong>2026.07</strong>: 🔥 The checkpoints for synthetic and realworld are now released.
 • <strong>2026.05</strong>: 🔥 The EgoExo-Synthetic dataset is now released.
 • <strong>2025.12</strong>: 🔥 Our paper, training code, and project page are released.
 </pre>
@@ -63,7 +64,7 @@ conda activate WorldWander
 
 ## 🚀 Try Inference
 WorldWander is trained on the [wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers) model using 4 H200 GPUs, with a batch size of 4 per GPU.
-To make it easier for you to use directly, we provide the following checkpoints for different tasks:
+To make it easier for you to use directly, we provide the following [lora checkpoints](https://huggingface.co/QuintonSung/WorldWander) for different tasks:
 
 | Models                             | Links                 | configs                                      |
 | ---------------------------------- | --------------------- | ------------------------------------------- |
