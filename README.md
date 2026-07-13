@@ -69,9 +69,9 @@ To make it easier for you to use directly, we provide the following [LoRA checkp
 | Models                             | Links                 | configs                                      |
 | ---------------------------------- | --------------------- | ------------------------------------------- |
 | wan2.2-TI2V-5B_three2one_synthetic | 🤗 [Huggingface](xxx) | configs/wan2-2_lora_three2one_synthetic.yaml |
-| wan2.2-TI2V-5B_one2three_synthetic | 🤗 [Huggingface](xxx) | configs/wan2-2_lora_one2three_synthetic.yaml |
+| wan2.2-TI2V-5B_one2three_synthetic | 🤗 [Huggingface](https://huggingface.co/QuintonSung/WorldWander/resolve/main/wan2-2_lora_one2three_synthetic.ckpt) | configs/wan2-2_lora_one2three_synthetic.yaml |
 | wan2.2-TI2V-5B_three2one_realworld | 🤗 [Huggingface](xxx) | configs/wan2-2_lora_three2one_realworld.yaml |
-| wan2.2-TI2V-5B_one2three_realworld | 🤗 [Huggingface](xxx) | configs/wan2-2_lora_one2three_realworld.yaml |
+| wan2.2-TI2V-5B_one2three_realworld | 🤗 [Huggingface](https://huggingface.co/QuintonSung/WorldWander/resolve/main/wan2-2_lora_one2three_realworld.ckpt) | configs/wan2-2_lora_one2three_realworld.yaml |
 
 You can download the specific checkpoint above and specify the corresponding config file for inference.
 For convenience, we have provided the following example script:
