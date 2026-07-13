@@ -63,7 +63,7 @@ conda activate WorldWander
 
 
 ## 🚀 Try Inference
-WorldWander is trained on the [wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers) model using 4 H200 GPUs, with a batch size of 4 per GPU.
+WorldWander is trained on the [Wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers) model using 4 H200 GPUs, with a batch size of 4 per GPU.
 To make it easier for you to use directly, we provide the LoRA checkpoints in [Huggingface](https://huggingface.co/QuintonSung/WorldWander) for different tasks:
 
 | Models                             | Links                 | configs                                      |
