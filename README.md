@@ -27,6 +27,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
 ## 🎉 News
 <pre>
 • <strong>2026.07</strong>: 🔥 The checkpoints for synthetic and realworld are now released.
+• <strong>2026.06</strong>: 🔥 WorldWander is accepted by ECCV 2026.
 • <strong>2026.05</strong>: 🔥 The EgoExo-Synthetic dataset is now released.
 • <strong>2025.12</strong>: 🔥 Our paper, training code, and project page are released.
 </pre>
