@@ -18,7 +18,7 @@ WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
     </span>
     <span> 
         <a href='https://huggingface.co/QuintonSung/WorldWander' target="_blank"> 
-        <img src='https://img.shields.io/badge/Checkpoint-WorldWander-blue' alt='Hugging Face'></a> &emsp;  &emsp;
+        <img src='https://img.shields.io/badge/Hugging_Face-Checkpoint-blue' alt='Hugging Face'></a> &emsp;  &emsp;
     </span>
 </p>
 
