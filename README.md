@@ -101,10 +101,10 @@ bash scripts/train_wan2.sh
 ## 🎓 Bibtex
 👋 If you find this code useful for your research, we would appreciate it if you could cite:
 ```
-@article{song2025worldwander,
-  title={WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation},
+@inproceedings{song2026worldwander,
+  title={Worldwander: Bridging egocentric and exocentric worlds in video generation},
   author={Song, Quanjian and Song, Yiren and Peng, Kelly and Gao, Yuan and Shou, Mike Zheng},
-  journal={arXiv preprint arXiv:2511.22098},
-  year={2025}
+  booktitle={European Conference on Computer Vision},
+  year={2026}
 }
 ```
